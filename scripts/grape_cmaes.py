@@ -143,6 +143,8 @@ def main() -> None:
     )
 
     print("calibration fit:", calibration_fit.config)
+    print("calibration initial loss:", calibration_fit.initial_loss)
+    print("calibration final loss:", calibration_fit.loss)
     print("calibrated GRAPE calibrated-model probability:", float(calibrated_model.photon_probability(calibrated_controls)))
     print("calibrated GRAPE hidden true probability:", float(true_model.photon_probability(calibrated_controls)))
 
