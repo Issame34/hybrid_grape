@@ -1,0 +1,37 @@
+[project]
+name = "hybrid-grape"
+version = "0.1.0"
+description = "GRAPE plus low-dimensional closed-loop CMA-ES for Fock-state preparation"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flax>=0.12.7",
+    "ipykernel",
+    "jax",
+    "jaxlib",
+    "jupyter>=1.1.1",
+    "matplotlib",
+    "numpy",
+    "optax",
+    "pytest>=9.0.3",
+    "qutip",
+    "scipy",
+    "tqdm",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = [
+    ".",
+]
+testpaths = [
+    "tests",
+]
